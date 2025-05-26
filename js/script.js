@@ -25,3 +25,58 @@ function log(texto) {
   entrada.textContent = texto;
   logArea.prepend(entrada);
 }
+function gorilaAtacar() {
+  if (gorilaVida <= 0 || humanosVivos <= 0) return;
+
+  const mortos = Math.min(humanosVivos, Math.floor(Math.random() * 10 + 5));
+  humanosVivos -= mortos;
+  const dano = mortos * humanosForca;
+  danoGorilaTotal += dano;
+  log(`🐵 Gorila eliminou ${mortos} humanos!`);
+
+  turnoHumanos();
+  atualizarInterface();
+}
+
+function gorilaDefender() {
+  if (gorilaVida <= 0 || humanosVivos <= 0) return;
+
+  const defesa = Math.floor(Math.random() * 10 + 5);
+  gorilaVida += defesa;
+  if (gorilaVida > 100) gorilaVida = 100;
+  gorilaEnergia += 10;
+  if (gorilaEnergia > 100) gorilaEnergia = 100;
+  log(`🛡️ Gorila se defendeu e recuperou ${defesa} de vida!`);
+
+  turnoHumanos();
+  atualizarInterface();
+}
+
+function gorilaCurar() {
+  if (gorilaEnergia < 20) {
+    log("⚠️ Energia insuficiente para curar.");
+    return;
+  }
+  const cura = Math.floor(Math.random() * 20 + 10);
+  gorilaVida = Math.min(100, gorilaVida + cura);
+  gorilaEnergia -= 20;
+  log(`❤️ Gorila se curou em ${cura} pontos de vida.`);
+
+  turnoHumanos();
+  atualizarInterface();
+}
+
+function usarHabilidadeEspecial() {
+  if (gorilaEnergia < 50) {
+    log("⚠️ Energia insuficiente para Rugido Sônico!");
+    return;
+  }
+  const eliminados = Math.min(humanosVivos, Math.floor(Math.random() * 25 + 10));
+  humanosVivos -= eliminados;
+  gorilaEnergia -= 50;
+  danoGorilaTotal += eliminados * humanosForca;
+  log(`💣 Rugido Sônico devastador! ${eliminados} humanos eliminados.`);
+
+  turnoHumanos();
+  atualizarInterface();
+}
