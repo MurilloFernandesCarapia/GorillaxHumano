@@ -15,3 +15,35 @@ LocalStorage (para persistência de dados)
 ❤️ Cura: O gorila recupera entre 10 e 24 pontos de vida (valor aleatório).
 🔄 Reset: Reinicia a batalha, limpando o progresso salvo no navegador.
 🗺️ Estrutura do Projeto
+
+HTML (index.html)
+Define a interface da batalha.
+
+1) Contém:
+- Cabeçalho com título.
+- Seção de status do gorila e dos humanos (vida, força média, quantidade viva).
+- Barra de ações (Atacar, Defender, Curar, Resetar).
+- Área de log que registra cada ação durante a batalha.
+- Rodapé com créditos.
+
+2) CSS (style.css)
+- Estiliza a interface com:
+- Fundo temático.
+- Barras de vida dinâmicas (mudam de cor com base na vida restante).
+- Botões estilizados com efeito hover e desativação após o fim do jogo.
+- Log com visual de terminal (texto verde em fundo preto).
+- Layout responsivo e organizado.
+
+3) JavaScript (script.js)
+Gerencia toda a lógica da batalha:
+
+- Criação dos humanos (vida = 10 e força aleatória entre 1 e 3).
+- Controle das ações do gorila (atacar, defender, curar).
+- Turno automático dos humanos após cada ação do gorila.
+- Quantidade de humanos vivos.
+- Força média dos humanos.
+- Vida do gorila e dos humanos (representada também nas barras visuais).
+- Verificação constante de condições de vitória ou derrota.
+- Desabilitação dos botões ao fim da batalha.
+- Salvamento e carregamento automático do estado da batalha usando LocalStorage.
+- Sistema de log que registra todos os eventos da batalha em tempo real.
