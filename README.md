@@ -61,3 +61,6 @@ O estado da batalha é salvo automaticamente no navegador usando localStorage.
 - Baixe ou clone o repositório.
 - Abra o arquivo index.html no seu navegador.
 - Jogue diretamente sem necessidade de servidores ou instalações.
+
+
+LINK DO NOSSO GITHUB: https://github.com/MurilloFernandesCarapia/GorillaxHumano
