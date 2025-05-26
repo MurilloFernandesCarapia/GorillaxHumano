@@ -94,5 +94,20 @@ footer {
   color: #fff;
   margin-top: 30px;
 }
+.painel-geral {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.painel-geral > div {
+  flex: 1;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
 
 
