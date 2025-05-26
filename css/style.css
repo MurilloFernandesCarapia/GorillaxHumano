@@ -53,4 +53,30 @@ header {
   background-color: #2196f3;
 }
 
+nav.acoes ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav.acoes li {
+  margin: 0 10px;
+}
+
+nav.acoes button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #222;
+  color: white;
+  transition: background 0.3s;
+}
+
+nav.acoes button:hover {
+  background-color: #444;
+}
+
 
