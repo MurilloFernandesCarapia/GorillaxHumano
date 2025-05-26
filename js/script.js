@@ -80,3 +80,35 @@ function usarHabilidadeEspecial() {
   turnoHumanos();
   atualizarInterface();
 }
+function turnoHumanos() {
+  if (humanosVivos <= 0) {
+    log("🏆 Vitória do Gorila!");
+    return;
+  }
+
+  const ataque = Math.floor(humanosVivos * (Math.random() * 0.1 + 0.05));
+  gorilaVida -= ataque;
+  if (gorilaVida < 0) gorilaVida = 0;
+  danoHumanosTotal += ataque;
+  log(`🧍 Humanos atacaram! Gorila sofreu ${attaque} de dano.`);
+
+  if (gorilaVida <= 0) {
+    log("💀 O gorila foi derrotado!");
+  }
+
+  document.getElementById("turnoAtual").textContent = "Gorila";
+}
+
+function resetar() {
+  gorilaVida = 100;
+  gorilaEnergia = 100;
+  humanosVivos = 100;
+  humanosForca = 5;
+  danoGorilaTotal = 0;
+  danoHumanosTotal = 0;
+  document.getElementById("log").innerHTML = "";
+  document.getElementById("turnoAtual").textContent = "Gorila";
+  atualizarInterface();
+}
+
+window.onload = atualizarInterface;
