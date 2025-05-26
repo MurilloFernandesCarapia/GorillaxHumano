@@ -47,3 +47,14 @@ Gerencia toda a lógica da batalha:
 - Desabilitação dos botões ao fim da batalha.
 - Salvamento e carregamento automático do estado da batalha usando LocalStorage.
 - Sistema de log que registra todos os eventos da batalha em tempo real.
+
+4) 💾 Persistência de Dados
+O estado da batalha é salvo automaticamente no navegador usando localStorage.
+
+- Ao recarregar a página, a batalha continua de onde parou.
+- O botão "🔄 Resetar" limpa o estado salvo e reinicia a batalha do zero.
+
+5) ✅ Como Rodar o Projeto
+- Baixe ou clone o repositório.
+- Abra o arquivo index.html no seu navegador.
+- Jogue diretamente sem necessidade de servidores ou instalações.
