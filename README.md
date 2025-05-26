@@ -1,4 +1,7 @@
-# GorillaxHumano
+Leonardo Zerbinatti de Sales, RM: 562992
+Murillo Fernandes Carapia, RM: 564942
+
+GorillaxHumano
 
 🐵 Gorila vs 100 Humanos, simulação interativa de uma batalha entre um gorila e 100 humanos. O usuário controla o gorila e pode atacar, defender ou se curar enquanto enfrenta uma horda de humanos com forças variadas.
 
